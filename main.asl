@@ -1,8 +1,6 @@
+
 state("BloonsTD6"){
-    int round :  0x20002CE, 0x17000B57;
-    var scanTarget = new SigScanTarget(0,
-        "40 53 48 83 EC 20 80 3D" // probably wrong
-    );
+    int tempvar : 0x0, 0x0
 }
 
 init{
@@ -11,15 +9,34 @@ init{
 
 startup{
     print("[START]");
-    
+    vars.round = 0;
 }
 
 split{
-    if(current.round == 39){
-        // MOAB
+
+    string path = @"round.txt";
+    string text = File.ReadAllText(path);
+    int round = Int32.Parse(text);
+
+    if (round == 40 &&vars.round!=40) {
+        vars.round = round;
         return true;
-        print("MOAB");
-    }else{
-        print("current rnd: "+current.round.ToString());
     }
+    if (round == 60 &&vars.round!=60) {
+        vars.round = round;
+        return true;
+    }if (round == 80 &&vars.round!=80) {
+        vars.round = round;
+        return true;
+    }if (round == 100 &&vars.round!=100) {
+        vars.round = round;
+        return true;
+    }
+    else {
+        
+    vars.round = round;
+    //print(vars.round.ToString());
+    }
+
+       
 }

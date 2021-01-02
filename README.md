@@ -2,23 +2,33 @@
 
 ## steps to install
 
-download and install the btd6 mod `btd6.dll`. A guide can be found [here](https://hemisemidemipresent.github.io/btd6-modding-tutorial/)
+download and install the btd6 mod `mod.dll`. A guide can be found [here](https://hemisemidemipresent.github.io/btd6-modding-tutorial/)
 
 Find the folder called `LiveSplit_1.x.x` which contains the livesplit stuff and rename it `LiveSplit`
 
-Put the `LiveSplit` folder into the Mods folder (refer to above link)
+Put the `LiveSplit` folder into the `Mods` folder (refer to above link)
 
-create a new text file called `round.txt` in that Mods\LiveSplit
+Download `main.asl` and put it inside the `Mods` folder
 
-Download `main.asl` and put it inside the Mods folder
+it should look like this
 
-open up livesplit and right click on the timer
+```
+BloonsTD6
+ - Mods
+   - LiveSplit
+     - LiveSplit.exe 
+   - mod.dll
+   - main.asl
+```
+open up livesplit (the one in the `Mods\LiveSplit`) and right click on the timer window
 
 click edit layout
 
 click the big plus button
 
-go to 
+click `Control/Scriptable Auto Splitter`
+
+go to the Mods folder and click the `main.asl`
 
 ### Splits
 
